@@ -34,10 +34,12 @@ export class NicknameEditorComponent implements OnInit {
     }
     this.nicknames.push(this._fb.control(this.newNickname, [], [this.customValidators.nickname.bind(this.customValidators)]));
     this.newNickname = '';
+    this.parentForm.markAsTouched();
   }
 
   remove(index: number): void {
     this.nicknames.removeAt(index);
+    this.parentForm.markAsTouched();
   }
 
 }

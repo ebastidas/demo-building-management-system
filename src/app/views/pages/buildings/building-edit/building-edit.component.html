@@ -27,17 +27,22 @@
       <app-nickname-editor [parentForm]="buildingForm"></app-nickname-editor>
     </div>
     <div class="footer">
-      <button
-        type="button"
-        class="save-button"
-        mat-raised-button
-        matTooltip="Click to save building details"
-        (click)="submit()"
-        color="primary"
-        [disabled]="buildingForm.invalid"
-      >
-        Save
-      </button>
+      <div class="save-button">
+        <button
+          type="button"
+          class="save-button"
+          mat-raised-button
+          matTooltip="Click to save building details"
+          (click)="submit()"
+          color="primary"
+          [disabled]="buildingForm.invalid"
+        >
+          Save
+        </button>
+      </div>
+      <div *ngIf="buildingForm.invalid" class="footer-error">
+        (Correct all errors in the form)
+      </div>
     </div>
   </form>
 </div>
