@@ -1,0 +1,33 @@
+.nicknames-container{
+  padding: 10px;
+    border-style: groove;
+    border-width: 1px;
+}
+
+.newnickame-container{
+  display: flex;
+
+  .input{
+    flex: 1;
+  }
+
+  .add-button{
+    flex: 1;
+    max-width: 140px;
+
+    .add-nickname{
+      margin-left: 15px;
+      height: 45px;
+    }
+
+  }
+
+  .delete-button{
+    flex: 1;
+    max-width: 140px;
+  }
+}
+
+.top-border{
+  padding-top: 10px;
+}

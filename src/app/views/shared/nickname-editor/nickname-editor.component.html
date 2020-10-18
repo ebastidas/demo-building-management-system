@@ -1,0 +1,56 @@
+<form [formGroup]="parentForm" class="nicknames-container">
+  <div formArrayName="nicknames">
+    <h2>Nicknames</h2>
+
+    <div class="newnickame-container">
+      <div class="input">
+        <mat-form-field
+          class="mat-form-field-fluid full-width"
+          appearance="fill"
+        >
+          <mat-label>Insert New Nickname</mat-label>
+          <input
+            [(ngModel)]="newNickname"
+            [ngModelOptions]="{ standalone: true }"
+            matInput
+            (keyup.enter)="addNickname()"
+          />
+        </mat-form-field>
+      </div>
+      <div class="add-button">
+        <button
+          class="add-nickname"
+          type="button"
+          mat-raised-button
+          matTooltip="Click to add a new nickname"
+          (click)="addNickname()"
+          color="primary"
+          [disabled]="!newNickname"
+        >
+          Add Nickname
+        </button>
+      </div>
+    </div>
+    <div *ngFor="let nickname of nicknames.controls; let i = index">
+      <div class="newnickame-container top-border">
+        <div class="input">
+          <mat-form-field
+            class="mat-form-field-fluid full-width"
+            appearance="outline"
+          >
+            <mat-label>Nickname {{ i + 1 }}</mat-label>
+            <input matInput [formControlName]="i" />
+            <mat-error *ngIf="nickname.hasError('nicknameValid')">
+              {{ nickname.getError("nicknameValid").message }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="delete-button">
+          <button mat-icon-button type="button" (click)="remove(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
