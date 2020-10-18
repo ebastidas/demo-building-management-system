@@ -4,7 +4,7 @@ This project is the Angular frontend app for a Building Management System.
 
 To see a demo of the app go to: https://building-management-system.stackblitz.io/
 
-The demo stackblitz app is linked to this repo, and you can see the code next to the running app [here](https://stackblitz.com/edit/building-management-system?file=src/app/views/pages/buildings/building-edit/building-edit.component.ts).
+The demo stackblitz app is linked to this repo, and you can see the code next to the running app here: https://stackblitz.com/edit/building-management-system?file=src/app/views/pages/buildings/building-edit/building-edit.component.ts
 
 <p align="center"><img src="docs/1_edit_building.png" alt="Edit Building Page (screenshot)" height="700"></p>
 
