@@ -57,7 +57,7 @@ Run `npm install`
 
 Run `ng serve` for a dev server and navigate to `http://localhost:4200/`
 
-## Running unit tests
+## Running unit tests 
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). Find most of the sample tests in the file `"src/app/views/pages/buildings/building-edit/building-edit.component.spec.ts"`
 
